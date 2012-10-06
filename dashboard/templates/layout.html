@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<title>FLASK TEST</title>
+
+{% block scripts %}{% endblock %}
+
+</head>
+
+<body>
+
+<header>
+<h1>Dashboard</h1>
+<nav>
+	<ul>
+		<li><a href="/">[home]</a></li>
+		<li><a href="/very_simple_page">[very simple page]</a></li>
+	</ul>
+</nav>
+</header>
+
+<section id="page_content">
+
+{% for message in get_flashed_messages() %}
+    <div>{{ message }}</div>
+{% endfor %}
+
+{% block body %}{% endblock %}
+
+</section>
+
+</body>
+</html>
