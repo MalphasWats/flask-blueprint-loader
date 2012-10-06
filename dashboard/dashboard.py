@@ -14,7 +14,7 @@ def home():
                             
                             
 def load_blueprints():
-    fp, pathname, description = imp.find_module('very_simple_page', 'blueprints')
+    fp, pathname, description = imp.find_module('very_simple_page', ['blueprints'])
     print fp, pathname, description
     mod = imp.load_module('very_simple_page', fp, pathname, description)
         
