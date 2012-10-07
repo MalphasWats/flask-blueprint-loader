@@ -1,4 +1,5 @@
 from flask import Blueprint
+from dashboard.dashboard import login_required
 
 module = Blueprint('very_simple_page', __name__,
                         template_folder='templates')
@@ -15,3 +16,4 @@ def show():
     <p>This is a very simple Page</p>
     </body>
     </html>"""
+    
