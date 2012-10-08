@@ -25,15 +25,10 @@ def login_required(f):
                             
                             
 def load_blueprints():
-<<<<<<< HEAD
-    fp, pathname, description = imp.find_module('very_simple_page', ['blueprints'])
-    print fp, pathname, description
-    mod = imp.load_module('very_simple_page', fp, pathname, description)
-=======
     """
         This code looks for any modules or packages in the given directory, loads them
         and then registers a blueprint - blueprints must be created with the name 'module'
->>>>>>> Implemented directory scan
+        Implemented directory scan
         
         Bulk of the code taken from:
             https://github.com/smartboyathome/Cheshire-Engine/blob/master/ScoringServer/utils.py
